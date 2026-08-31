@@ -54,10 +54,17 @@ ListenBrainz scrobbling, home-screen widget. Ships as signed releases with a
 What was measured against YouTube's servers — and what turned out not to work —
 is written down in [`docs/streaming-findings.md`](https://github.com/duvanherfi/tunebox/blob/main/docs/streaming-findings.md).
 
-### [Smart Tracking](https://github.com/duvanherfi/smart-tracking-docs) · Flutter, Rails, MongoDB
-Fleet tracking app that derives geofences from raw location history with
-**DBSCAN** clustering, instead of asking the operator to draw them by hand.
-Technical, install and user manuals in the repo.
+### Smart Tracking · Flutter, Rails 8, MongoDB
+Fleet tracking app that works out a vehicle's geofences from where it has
+actually been, instead of asking the operator to draw them. Every position from
+the year is mapped onto a cell of Uber's **H3** hexagonal grid, the repeated
+cells collapse to one, and what is left is unioned back into a polygon — no
+cluster count to guess and no density threshold to tune, just a cell size you
+can point at on a map. Final integrative project of the MSc.
+
+[API](https://github.com/duvanherfi/smart-tracking-back) ·
+[mobile client](https://github.com/duvanherfi/smartTracking-flutter) ·
+[manuals](https://github.com/duvanherfi/smart-tracking-docs)
 
 ### [Rails microservices over RabbitMQ](https://github.com/duvanherfi/rails-microservices-rabbitmq) · Ruby, Rails
 Two services, REST for synchronous queries and RabbitMQ for events, with the
