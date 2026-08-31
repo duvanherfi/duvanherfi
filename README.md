@@ -27,7 +27,7 @@ in Ruby on Rails and Go.
 - I like problems where the interesting part is the constraint: a streaming
   proxy because the server refuses unbounded requests, a cache store because
   the app runs on Mongo and not Active Record
-- Based in Cali, Colombia. Open to remote work and freelance projects.
+- Based in Cali - Palmira, Colombia. Open to remote work and freelance projects.
 
 <br clear="right">
 
