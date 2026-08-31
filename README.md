@@ -19,7 +19,11 @@ native. Currently at [@picap-inc](https://github.com/picap-inc), working mostly
 in Ruby on Rails and Go.
 
 - Systems Engineer, [Universidad del Valle](https://eisc.univalle.edu.co/) — MSc in intelligent application development
-- Day to day: **Ruby on Rails**, **Go**, **Flutter**, **PostgreSQL / MongoDB**, **RabbitMQ**, **Docker**
+- Day to day: **Ruby on Rails**, **Go**, **Flutter**, **PostgreSQL / MongoDB**, **RabbitMQ**
+- Infrastructure: **AWS**, **Terraform**, **Kubernetes**, **Docker**, **GitHub Actions** — I led the
+  migration of a monolith to microservices, with the infrastructure defined as code and the
+  pipelines that deploy it. That work lives in private repositories; what is public here is the
+  application side
 - I like problems where the interesting part is the constraint: a streaming
   proxy because the server refuses unbounded requests, a cache store because
   the app runs on Mongo and not Active Record
@@ -31,6 +35,14 @@ in Ruby on Rails and Go.
 
 ## Projects
 
+### [solid_cache_mongoid](https://github.com/duvanherfi/solid_cache_mongoid) · Ruby, Rails
+Rails' Solid Cache rewritten on top of Mongoid, so applications backed by
+MongoDB get a database-backed `ActiveSupport::Cache::Store` instead of being
+forced onto Redis for caching alone. The parts that lean on SQL had to be
+rebuilt: document locking instead of advisory locks, `BSON::Binary` storage,
+a 64-bit key hash, and a size estimate that samples rather than scans.
+Published as a gem — **~1.9k downloads on RubyGems**.
+
 ### [Tunebox](https://github.com/duvanherfi/tunebox) · Flutter, Dart
 A YouTube Music client for Android, Android Auto and macOS that talks to
 InnerTube directly — no microG, no Play Services, no WebView. Playback goes
@@ -41,11 +53,6 @@ ListenBrainz scrobbling, home-screen widget. Ships as signed releases with a
 
 What was measured against YouTube's servers — and what turned out not to work —
 is written down in [`docs/streaming-findings.md`](https://github.com/duvanherfi/tunebox/blob/main/docs/streaming-findings.md).
-
-### [solid_cache_mongoid](https://github.com/duvanherfi/solid_cache_mongoid) · Ruby, Rails
-Rails' Solid Cache rewritten on top of Mongoid, so applications backed by
-MongoDB get a database-backed `ActiveSupport::Cache::Store` instead of being
-forced onto Redis. Published as a gem.
 
 ### [Smart Tracking](https://github.com/duvanherfi/smart-tracking-docs) · Flutter, Rails, MongoDB
 Fleet tracking app that derives geofences from raw location history with
@@ -77,6 +84,10 @@ them, serves a bundled web UI. `docker compose up` and it runs.
   <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
   <img src="https://img.shields.io/badge/RabbitMQ-FF6600?style=flat-square&logo=rabbitmq&logoColor=white" />
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
   <img src="https://img.shields.io/badge/Hotwire-FF3E00?style=flat-square&logo=hotwire&logoColor=white" />
   <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" />
 </p>
@@ -89,10 +100,7 @@ them, serves a bundled web UI. `docker compose up` and it runs.
   <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" />
   <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
   <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
 </p>
 
 ---
